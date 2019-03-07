@@ -88,7 +88,7 @@ func NewTest(ipAddress net.IP, htp HealthTestParameters, tester *HealthTester) *
 	return &ht
 }
 
-// Format the health test as a string - used to compare two tests and as an index for the hash
+// String: Format the health test as a string - used to compare two tests and as an index for the hash
 func (ht *HealthTest) String() string {
 	ip := ht.ipAddress.String()
 	if ht.HealthTestParameters.global {

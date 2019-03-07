@@ -62,7 +62,7 @@ func (mm *MuxManager) Run() {
 	}
 }
 
-// GetZones returns the list of currently active zones in the mux manager.
+// Zones: Zones returns the list of currently active zones in the mux manager.
 // (todo: rename to Zones() when the Zones struct has been renamed to ZoneList)
 func (mm *MuxManager) Zones() ZoneList {
 	return mm.zonelist

@@ -68,7 +68,7 @@ func NewServer(si *monitor.ServerInfo) *Server {
 	return &Server{mux: mux, info: si, metrics: metrics}
 }
 
-// Setup the QueryLogger. For now it only supports writing to a file (and all
+// SetQueryLogger: Setup the QueryLogger. For now it only supports writing to a file (and all
 // zones get logged to the same file).
 func (srv *Server) SetQueryLogger(logger querylog.QueryLogger) {
 	srv.queryLogger = logger

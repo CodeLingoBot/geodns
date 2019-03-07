@@ -209,7 +209,7 @@ func (z *Zone) findFirstLabel(s string, targets []string, qts []uint16) *LabelMa
 	return &matches[0]
 }
 
-// Find label "s" in country "cc" falling back to the appropriate
+// FindLabels: Find label "s" in country "cc" falling back to the appropriate
 // continent and the global label name as needed. Looks for the
 // first available qType at each targeting level. Returns a list of
 // LabelMatch for potential labels that might satisfy the query.
@@ -274,7 +274,7 @@ func (z *Zone) FindLabels(s string, targets []string, qts []uint16) []LabelMatch
 	return matches
 }
 
-// Find the locations of all the A and AAAA records within a zone. If we were
+// SetLocations: Find the locations of all the A and AAAA records within a zone. If we were
 // being really clever here we could use LOC records too. But for the time
 // being we'll just use GeoIP.
 func (z *Zone) SetLocations() {
